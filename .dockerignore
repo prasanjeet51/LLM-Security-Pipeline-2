@@ -1,0 +1,44 @@
+# Git and CI
+.git/
+.github/
+.claude/
+.mypy_cache/
+.pytest_cache/
+.coverage
+*.egg-info/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Secrets and personal files
+.env
+CLAUDE.md
+learning_log.md
+explain.md
+carry.md
+.secrets.baseline
+
+# Large model artifacts — mount as volumes in production
+models/stage_a_adapter/
+models/stage_a_merged/
+models/stage_a_onnx/
+models/baseline/
+
+# Data — mount as volumes in production
+data/
+
+# Dev / test artifacts
+tests/
+reports/
+mlruns/
+mlflow.db
+venv/
+hf_space/
+
+# Zip artifacts (Kaggle exports)
+*.zip
+
+# Notebooks
+*.ipynb

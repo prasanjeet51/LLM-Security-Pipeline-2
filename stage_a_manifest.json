@@ -1,0 +1,23 @@
+{
+  "model_name": "answerdotai/ModernBERT-base",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "target_modules": [
+    "Wqkv",
+    "Wo"
+  ],
+  "max_length": 512,
+  "training_samples": 13974,
+  "epochs_completed": 5,
+  "best_val_f1": 0.9804901613410628,
+  "training_device": "T4",
+  "onnx_exported": true,
+  "onnx_path": "models/stage_a_onnx/",
+  "onnx_int8_exported": true,
+  "onnx_int8_path": "models/stage_a_onnx/model_int8.onnx",
+  "onnx_speedup_ratio": 1.78,
+  "onnx_fp32_latency_ms": 334.8,
+  "onnx_int8_latency_ms": 188.4,
+  "date": "2026-04-17",
+  "int8_quantized_date": "2026-04-24"
+}

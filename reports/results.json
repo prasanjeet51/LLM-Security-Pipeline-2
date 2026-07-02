@@ -1,0 +1,27 @@
+{
+  "project": "P1-Hybrid-Jailbreak-Detector",
+  "benchmarks": [
+    {
+      "model": "TF-IDF + LinearSVC (baseline)",
+      "accuracy": 0.9222,
+      "weighted_f1": 0.9217,
+      "jailbreak_recall": 0.4921,
+      "indirect_recall": 0.5472,
+      "false_positive_rate_safe": 0.024,
+      "latency_p50_ms": 4.14,
+      "latency_p95_ms": 5.62,
+      "date": "2026-04-17"
+    },
+    {
+      "model": "Stage A ModernBERT LoRA (hybrid)",
+      "accuracy": 0.9988,
+      "weighted_f1": 0.9988,
+      "jailbreak_recall": 0.9947,
+      "indirect_recall": 0.9906,
+      "false_positive_rate_safe": 0.0004,
+      "latency_p50_ms": 206.39,
+      "latency_p95_ms": 293.7,
+      "date": "2026-04-17"
+    }
+  ]
+}

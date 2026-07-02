@@ -1,0 +1,17 @@
+{
+  "model_name": "answerdotai/ModernBERT-base",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "target_modules": ["Wqkv", "Wo"],
+  "max_length": 512,
+  "training_samples": 11068,
+  "epochs_completed": 5,
+  "best_val_f1": 0.9722712546289657,
+  "training_device": "T4",
+  "onnx_exported": true,
+  "onnx_path": "models/stage_a_onnx/",
+  "onnx_speedup_ratio": 1.0,
+  "date": "2026-04-16",
+  "day7_eval_note": "Trained on Kaggle data (safe=15000, jailbreak=609, injection=203). OOD on updated pipeline (jackhhao+SPML sources). Re-run needed with improved data pipeline.",
+  "day7_test_note": "Day 7 evaluation on updated 2545-row test set: baseline jailbreak_recall=0.4921 indirect_recall=0.5472, stage_a jailbreak_recall=0.5079 indirect_recall=0.3774. Both sub-optimal — trained on stale data. Re-train on Kaggle to get real numbers."
+}

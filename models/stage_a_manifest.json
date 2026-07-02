@@ -1,0 +1,18 @@
+{
+  "model_name": "answerdotai/ModernBERT-base",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "target_modules": [
+    "Wqkv",
+    "Wo"
+  ],
+  "max_length": 512,
+  "training_samples": 13974,
+  "epochs_completed": 5,
+  "best_val_f1": 0.9804901613410628,
+  "training_device": "T4",
+  "onnx_exported": true,
+  "onnx_path": "models/stage_a_onnx/",
+  "onnx_speedup_ratio": 1.0,
+  "date": "2026-04-17"
+}

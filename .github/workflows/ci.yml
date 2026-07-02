@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: ["main", "dev"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  lint-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: black
+        run: black --check src/ tests/
+
+      - name: isort
+        run: isort --check-only src/ tests/ --profile black
+
+      - name: flake8
+        run: flake8 src/ tests/
+
+      - name: mypy
+        run: mypy src/
+
+      - name: bandit
+        run: bandit -r src/ -ll -ii
+
+      - name: radon complexity
+        run: radon cc src/ -nc
+
+      - name: interrogate docstrings
+        run: interrogate src/ --fail-under=80
+
+      - name: pip-audit
+        run: pip-audit -r requirements.txt
+
+      - name: pytest
+        run: pytest --cov=src --cov-fail-under=70

@@ -1,2 +1,13 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+* text=auto eol=lf
+*.py text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+*.md text eol=lf
+
+*.html linguist-generated=true
+*.png linguist-generated=true
+*.pkl linguist-generated=true
+reports/** linguist-generated=true
+scripts/kaggle_train.ipynb linguist-generated=true
+models/manifests/*.json linguist-generated=true

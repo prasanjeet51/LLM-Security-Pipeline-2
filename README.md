@@ -1,6 +1,24 @@
+---
+title: LLM Security Pipeline
+emoji: 🛡️
+colorFrom: blue
+colorTo: purple
+sdk: gradio
+sdk_version: "5.0.0"
+python_version: "3.10"
+app_file: app.py
+pinned: false
+---
+
+
 <div align="center">
 
-# Hybrid LLM Jailbreak + Prompt Injection Detector
+# 
+
+
+
+
+Hybrid LLM Jailbreak + Prompt Injection Detector
 
 **A defense-in-depth input-safety layer for LLM applications. Catches direct jailbreak attempts and indirect prompt injections with a calibrated, explainable, deterministic decision gate.**
 
